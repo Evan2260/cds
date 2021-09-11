@@ -1,0 +1,96 @@
+/* CSS:
+Make the First Name and Last Name fields 14px, bold. Make the email field italics. Please make all other fields 12px.
+For required fields please add an asterisk (*) after the field name and make it bold and red. Make the footer text 18px, bold.
+Create a header at the top of the form with the text: Contact Details. */
+
+/* Make the First Name and Last Name fields 14px, bold.
+
+Make the email field italics. Please make all other fields 12px.
+
+For required fields please add an asterisk (*) after the field name and make it bold and red. Make the footer text 18px, bold.
+
+Create a header at the top of the form with the text: Contact Details */
+
+.text {
+  font-size: 12px;
+  color: white;
+  background: black;
+  padding: 50px;
+}
+
+.fName-field{
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.lName-field{
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.phoneNum-field{
+  /* font-weight: bold; */
+  font-size: 12px;
+}
+
+.email-text {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.email-req {
+  font-size: 11px;
+}
+
+.asterisk-req {
+  font-size: 12px;
+  color: red;
+  font-style: bold;
+}
+
+.other-textbox:valid {
+  border-color: red;
+}
+
+.footer-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+/* =========================== pop up modal box ============================*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

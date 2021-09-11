@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CDS Challenge</title>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the modal...</p>
+        </div>
+      </div>
+
+      <h1>
+        Contact Details
+      </h1>
+
+    <link rel="stylesheet" type="text/css" href="cds.css" />
+  </head>
+
+  <body class="text">
+    <script type="text/javascript" src="cds.js"></script>
+
+    <form name="contactDetails" onsubmit="validateFilledForm();promoField();textAreaValidation();" method="post">
+
+      <label class="fName-field" for="firstname">First Name: <span class="asterisk-req">*</span></label>
+        <br>
+      <input type="text" name="fName" maxLength="30" id="firstname">
+        <br>
+        <br>
+
+      <label class="lName-field" for="lastname">Last Name: <span class="asterisk-req">*</span></label>
+          <br>
+        <input type="text" name="lName" maxLength="30" id="lastname">
+          <br>
+        <br>
+      <label class="phoneNum-field" for="phoneNumber">Phone Number: <span class="asterisk-req">*</span></label>
+        <br>
+      <input type="text" name="phoneNum" maxLength="30" id="phoneNumber" pattern="[0-9]+" required>
+          <br>
+          <br>
+        <label class="email-text" for="emailAddress">
+          <em>Email Address: <span class="asterisk-req">*</span></em>
+        </label>
+          <br>
+        <input type="email" name="email" maxLength="50" id="emailAddress">
+    <div class="email-req">
+      <p>
+        <span class="asterisk-req">*</span> Field is required for email confirmation.
+      </p>
+    </div>
+
+        <br>
+      <label for="promo">Promotional Code:</label>
+      <br>
+      <input type="text" name="promo" maxLength="7" id="promo">
+        <br>
+          <p>
+            If you do not have a Promotional Code, please select on of the following below of how you heard about us. If other, please type in your response in the box below the selections.
+          </p>
+          <label for="dropDownMenuSelect">How did you hear about us?</label>
+      <div id="select">
+      <select name="how-did-you-hear">
+        <option value="">Select</option>
+        <option value="other">Other</option>
+        <option value="social Media">Social Media</option>
+        <option value="from a friend">From a Friend</option>
+        <option value="email">Email</option>
+      </select>
+      </div>
+        <br>
+        <br>
+       <!-- Do not indent/space text area -->
+      <textarea type="text"name="hearUs"id="hearUs"rows="8"cols="25"onClick="dropDownMenu();"></textarea>
+        <!-- Do not indent/space text area -->
+        <br>
+        <br>
+        <br>
+          <label for="terms">I have read and reviewed the
+            <a href="#" onClick="showTerms()">Terms and Conditions</a>.
+          </label>
+          <input type="checkbox" name="terms" value="terms" id="terms" required>
+          <!-- required -->
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <input id="submitButton" type="submit" value="Submit" onClick="greenModalBox();">
+    </form>
+  </body>
+  <footer>
+    <p class="footer-text"><strong>
+      For assistance please call 555-5555 or email test@test.com.
+    </strong></p>
+  </footer>
+</html>
