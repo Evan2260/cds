@@ -37,7 +37,6 @@ function promoField() {
 // };
 // ======================= Text Area validation ============================
 function textAreaValidation(){
-  // onSubmit function
   let menuOther = document.querySelector("select");
   let other = menuOther.value
   let textArea = document.getElementById("hearUs");
@@ -56,39 +55,38 @@ function textAreaValidation(){
 function showTerms(){
   alert(title)
 };
+// =================Complete Validation==========================
+function ending(){
+  if(validateFilledForm && promoField && textAreaValidation){
+    alert("Put this logic in greenBox function or encapsulate greenBox function with this function.")
+  };
+};
 // ========================= Green Box ================================
-function greenModalBox(){
-  // submit button
-  submitButton = document.getElementById("submitButton");
-  debugger
+
+
   // Get the modal
   var modal = document.getElementById("myModal");
-debugger
-  // Get the <span> element that closes the modal
+
+  // button that opens modal
+  var btn = document.getElementById("myBtn");
+
+  //the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
-debugger
+
   // When the user clicks the button, open the modal
-  submitButton.onclick = function() {
+  btn.onclick = function() {
     modal.style.display = "block";
   }
-debugger
+
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
     modal.style.display = "none";
   }
-debugger
+
   // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    debugger
-    if (event.target == modal) {
-      modal.style.display = "none";
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
     }
-  }
-}
-
-
-// Once all fields are filled in correctly please display a message at the top of the screen that says “You have filled in all the fields correctly.” Have the message display in a green box.
-
-
-
-// =====================================================================
+// =================================================================

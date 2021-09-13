@@ -2,17 +2,21 @@
 <html>
   <head>
     <title>CDS Challenge</title>
+    <h1>
+      Contact Details
+    </h1>
 
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>Some text in the modal...</p>
-        </div>
+    <button onClick="ending();">Validate</button>
+
+    <button id="myBtn">Open Modal</button>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the modal...</p>
       </div>
+    </div>
 
-      <h1>
-        Contact Details
-      </h1>
 
     <link rel="stylesheet" type="text/css" href="cds.css" />
   </head>
@@ -20,7 +24,7 @@
   <body class="text">
     <script type="text/javascript" src="cds.js"></script>
 
-    <form name="contactDetails" onsubmit="validateFilledForm();promoField();textAreaValidation();" method="post">
+    <form name="contactDetails" onsubmit="validateFilledForm();promoField();textAreaValidation()" method="post">
 
       <label class="fName-field" for="firstname">First Name: <span class="asterisk-req">*</span></label>
         <br>
@@ -79,13 +83,18 @@
             <a href="#" onClick="showTerms()">Terms and Conditions</a>.
           </label>
           <input type="checkbox" name="terms" value="terms" id="terms" required>
-          <!-- required -->
-        <br>
-        <br>
         <br>
         <br>
 
-        <input id="submitButton" type="submit" value="Submit" onClick="greenModalBox();">
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the modal...</p>
+          </div>
+        </div>
+        <br>
+
+        <input onClick="ending();" type="submit" value="Submit">
     </form>
   </body>
   <footer>
